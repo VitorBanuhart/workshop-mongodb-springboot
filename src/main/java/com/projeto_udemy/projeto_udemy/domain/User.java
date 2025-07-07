@@ -2,17 +2,22 @@ package com.projeto_udemy.projeto_udemy.domain;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class User implements Serializable{
 
+    @Id
     private String id;
-    private String name;
+    private String nome;
     private String email;
 
     public User() {}
     
-    public User(String id, String name, String email) {
+    public User(String id, String nome, String email) {
         this.id = id;
-        this.name = name;
+        this.nome = nome;
         this.email = email;
     }
 
@@ -20,8 +25,8 @@ public class User implements Serializable{
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getnome() {
+        return nome;
     }
 
     public String getEmail() {
@@ -33,7 +38,7 @@ public class User implements Serializable{
         final int prime = 31;
         int result = 1;
         result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        result = prime * result + ((nome == null) ? 0 : nome.hashCode());
         result = prime * result + ((email == null) ? 0 : email.hashCode());
         return result;
     }
@@ -52,10 +57,10 @@ public class User implements Serializable{
                 return false;
         } else if (!id.equals(other.id))
             return false;
-        if (name == null) {
-            if (other.name != null)
+        if (nome == null) {
+            if (other.nome != null)
                 return false;
-        } else if (!name.equals(other.name))
+        } else if (!nome.equals(other.nome))
             return false;
         if (email == null) {
             if (other.email != null)
