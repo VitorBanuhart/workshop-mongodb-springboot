@@ -1,7 +1,4 @@
 package com.projeto_udemy.projeto_udemy.resource;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projeto_udemy.projeto_udemy.domain.User;
-import com.projeto_udemy.projeto_udemy.repository.UserRepository;
 import com.projeto_udemy.projeto_udemy.services.UserServices;
 
 @RestController
@@ -27,3 +23,4 @@ public class UserResource {
         return ResponseEntity.ok().body(list);
     }
 }
+
