@@ -33,6 +33,19 @@ public class User implements Serializable{
         return email;
     }
 
+    
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
     @Override
     public int hashCode() {
         final int prime = 31;
