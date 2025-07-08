@@ -19,4 +19,5 @@ public class PostServices {
         Optional<Post> obj = repo.findById(id);
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
     }
+
 }
